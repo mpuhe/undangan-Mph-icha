@@ -1,0 +1,118 @@
+<!DOCTYPE html><html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Undangan Pernikahan Mahpudin & Siti Nurharisah</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Open+Sans&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Open Sans', sans-serif;
+      margin: 0;
+      background-color: #fffaf5;
+      color: #333;
+      scroll-behavior: smooth;
+    }
+    header {
+      text-align: center;
+      padding: 80px 20px;
+      background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('https://via.placeholder.com/800x400') center/cover;
+      color: white;
+    }
+    header h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.5em;
+      margin-bottom: 0.3em;
+    }
+    section {
+      padding: 60px 20px;
+      max-width: 800px;
+      margin: auto;
+    }
+    .countdown {
+      font-size: 1.5em;
+      text-align: center;
+      margin: 20px 0;
+    }
+    .galeri img {
+      max-width: 100%;
+      border-radius: 8px;
+      margin-bottom: 20px;
+    }
+    iframe {
+      width: 100%;
+      height: 300px;
+      border: 0;
+      border-radius: 8px;
+    }
+    .rsvp {
+      text-align: center;
+      margin-top: 40px;
+    }
+    .rsvp a {
+      background-color: #d2691e;
+      color: white;
+      padding: 12px 24px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    footer {
+      text-align: center;
+      padding: 40px 20px;
+      font-size: 0.9em;
+      color: #777;
+    }
+  </style>
+</head>
+<body>
+  <audio autoplay loop hidden>
+    <source src="bidadari-surga.mp3" type="audio/mpeg">
+    Browser Anda tidak mendukung audio.
+  </audio>  <header>
+    <h1>Mahpudin & Siti Nurharisah</h1>
+    <p>Sabtu, 26 April 2025</p>
+  </header>  <section>
+    <h2>Assalamu'alaikum Warahmatullahi Wabarakatuh</h2>
+    <p>Dengan memohon rahmat dan ridho Allah SWT, kami mengundang Bapak/Ibu/Saudara/i untuk hadir dalam acara pernikahan kami:</p>
+    <p><strong>Mahpudin</strong><br>Putra dari Bapak Subandri & Ibu Emun</p>
+    <p><strong>Siti Nurharisah</strong><br>Putri dari (Alm) Bapak Ali Jahari & Ibu Rohanah</p>
+  </section>  <section>
+    <h2>Waktu & Tempat</h2>
+    <p><strong>Hari/Tanggal:</strong> Sabtu, 26 April 2025</p>
+    <p><strong>Waktu:</strong> Pukul 10.00 WIB - Selesai</p>
+    <p><strong>Tempat:</strong> Jl. Kedoya Raya Gg. Bhineka Rt 006 Rw 04 No.18, Kec. Kebon Jeruk, Kel. Kedoya Utara, Jakarta Barat 11520</p>
+  </section>  <section>
+    <h2>Menuju Hari Bahagia</h2>
+    <div class="countdown" id="countdown"></div>
+  </section>  <section class="galeri">
+    <h2>Galeri Prewedding</h2>
+    <img src="https://via.placeholder.com/600x400" alt="Foto Prewedding 1">
+    <img src="https://via.placeholder.com/600x400" alt="Foto Prewedding 2">
+  </section>  <section>
+    <h2>Peta Lokasi</h2>
+    <iframe src="https://www.google.com/maps?q=-6.195022,106.771918&hl=id&z=16&output=embed"></iframe>
+  </section>  <section class="rsvp">
+    <h2>Konfirmasi Kehadiran</h2>
+    <p>Silakan konfirmasi kehadiran melalui WhatsApp:</p>
+    <a href="https://wa.me/6285883134083">Kirim RSVP</a>
+  </section>  <footer>
+    <p>Terima kasih atas doa dan restunya. Wassalamu'alaikum Warahmatullahi Wabarakatuh</p>
+    <p>Mahpudin & Siti Nurharisah</p>
+  </footer>  <script>
+    const countdownDate = new Date("Apr 26, 2025 10:00:00").getTime();
+    const countdownEl = document.getElementById("countdown");
+    const x = setInterval(function() {
+      const now = new Date().getTime();
+      const distance = countdownDate - now;
+      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+      countdownEl.innerHTML = `${days} hari ${hours} jam ${minutes} menit ${seconds} detik`;
+      if (distance < 0) {
+        clearInterval(x);
+        countdownEl.innerHTML = "Acara telah berlangsung";
+      }
+    }, 1000);
+  </script></body>
+</html>
